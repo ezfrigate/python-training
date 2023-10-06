@@ -1,0 +1,14 @@
+
+1.1 remove special chars from column name
+1.2 remove special chars from data where it is there	
+1.3  remove all the rows having Null values	
+2. find the net salary after 30% deduction of tax	
+3. Filter the salaries of people where name starts with S	
+4. create another column Int_Sal where salary is stored as integer type	
+5. Find the name of employee having maximum salary	
+6. Filter the salaries of employees having n in the last	
+7. Sort the data based on Name	
+8. filter the names of employees where salary is between 400000 and 600000	
+9. Find the Mean salary from the salary column	
+#11. Plot a bar graph having names as bar labels and their salaries	-- optional
+#12. Plot a pie chart of top 5 employees having maximum salaries	-- optional
