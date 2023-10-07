@@ -1,0 +1,9 @@
+# Homework
+# Write at least 30 functions in pandas
+# Aggregate functions
+# groupby functions
+# missing value treatment functions
+# plotting the graphy from panda's data frame directly without using matplotlib
+# learn more about datetime, os libraries
+# read more about iterators, generators, decorators, collections library, (yield, ...)
+# Use os library to file copy, delete, move, rename, other OS functionalities
