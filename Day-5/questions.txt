@@ -1,0 +1,14 @@
+1. Print model statastics using stats.model.api libs. 
+	Understand the meaning of 
+		omnibus, 
+		durbin watson, 
+		R^2 value, 
+		adjusted R^2 value, 
+		F statastics value, 
+		probability of F statastics value, 
+		COEF, Standard error, 
+		T statastics, 
+		probability of T(0.025, 0.975).
+		Residual statastics, 
+		skewness, 
+		Kurtosis

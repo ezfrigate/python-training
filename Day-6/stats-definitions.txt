@@ -1,0 +1,58 @@
+R-squared:                       0.869
+R-squared is measure of how well the independent variable explains the variation in the dependent variable
+Value ranges between 0 and 1.
+Higher the value indicates better fit
+
+Adj. R-squared:                  0.807
+Adj R-squared value adjusts R-squared value to the account for the number of independent variable
+Get penalizes the addition of irrelavent variable. It provides more accurate measure of model explanatory power
+
+
+F-statistic:                     13.93
+HIgher its value indicates model is more significant
+It tests overall significance of the model
+
+
+Prob (F-statistic):           3.79e-07
+The P value associated with F-statistic represents the probability of observing the obtained F-statistic 
+If its value is below 0.05 it suggest the model is statastically more significant.
+
+coef    
+
+These represents intercept and slope of all the variables. Ex : cyl+disp+hp+drat+wt+qsec+vs+am+gear+carb
+
+std err
+It shows standard error associated with coeffient estimates
+Smaller standard error indicates more precise estimates
+
+Probality - [0.025      0.975]
+This represents confidence interval of each coeffient. 
+It provides the range of values within which 95% confident where the true population coeffient lies.
+
+Kurtosis:                       2.526   
+Kurtosis measures the peakness or the flatness of residual distibution.
+If its value is close to zero it means if follows normal distibution curve.
++ve Kurtosis indicates more peak distibution with heaver tails.
+-be Kurtosis indicates flatter distibution.
+
+
+Omnibus:                        1.907
+Omnibus tests for the normality of residuals. If the P value lesser than 0.05 it means model is significant
+Omnibus talks abouts statastical test value. 
+
+Prob(Omnibus):                  0.385
+Probality of Omnibus.
+
+Durbin-Watson:                   1.861
+This test tests for the presence of the auto correlation in the residual.
+Its value ranges between 0 to 4. value arround 2 indicates no significant auto correlation.
+Its value ranges below 1 and abode 3 indicates +ve or -ve correlation.
+
+Assumption of LR
+There are 6 assumptions in linear regression. If any model follows all these 6, we can rely on the model.
+1. presence of linearity - which we can see by plotting the grap.
+2. Mean of residual should be close to zero. 
+3. check for homoscedasticity. Residual should have equal or almost equal varainces accross regression line.
+4. check for normality of error terms. If residual follows normal distibution curve model is good.
+5. No perfect multico-linearity of residuals
+6. check for auto correlation between residuals. if there is no correlation between variable then the model is good.
