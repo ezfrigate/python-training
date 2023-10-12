@@ -1,0 +1,23 @@
+# Steps to follow : try not to hardcode column names the code should be generic so that if you supply any other data set it should run well.
+# 1. Check df.shape
+# 2. Check df.columns
+# 3. Check df.dtypes
+# 4. Remove special chars from column names
+# 5. Remove leading and trailing spaces from colmun names
+# 6. Remove rows where special chars are present
+# 7. Convert catagorical dependent variable to numbers
+# 7.1 Use 3sd technique to remove outliers (do not blindly delete it, check if it really is an outlier)
+# 8. Check the count of missing vallues in the colmuns
+# 9. Check the missing vlaue ratio in every column
+# 10. If the missing value ratio is >=0.3 delete the column
+# 11. If the missing value ratio is <0.3 then impute the missing value to the maximum occuring value of that column
+# 12. Find the variance of each column, if var<0.1 then delete the column
+# 13. Find the correlation between independent variables
+# 14. If the correlation is > 0.8 then delete all of them except 1 (Do not manually delete the columns, hint: use numpy.diag)
+# 15. Plot a bar chart of dependent var count of categories and check if data is balanced or unbalanced. (hint : use sns.countplot)
+# 16. If data is balanced, we use accuracy score otherwise use f1 score
+# 17. Check dtypes will show all the columns are float or int
+# 18. Check if the data points are in same scale or not in not use standardscaler to scale them (remove dependent var in scale)
+# 19. Split the data into training and testing, implement logistic regression, decision tree and random forest
+# 20. Check the feature importances in decision tree and random forest and try to increase the accuracy
+# 21. If the accuracy is < 0.9 find out the reason why it is less
