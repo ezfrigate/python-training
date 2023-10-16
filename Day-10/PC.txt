@@ -1,0 +1,30 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Steps for PC\n",
+    "\n",
+    "# Scale the Data\n",
+    "# Calculate covariance matrix\n",
+    "# Calculate eigen values of covarience matrix\n",
+    "\n",
+    "# det | A- lambda_I | = 0, where A = covariance matrix, I = Identity matrix\n",
+    "\n",
+    "# Calculate eigen vectors of covarience matrix\n",
+    "# Order eigen values in descending order\n",
+    "# Calculate priciple component\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

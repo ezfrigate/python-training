@@ -1,0 +1,129 @@
+Decision trees
+-----------------
+can be used for both regression and classification problems
+if the dependent var is categorical - we use DecisionTreeClassifier
+if the dependent var is continuous - we use DecisionTreeRegressor
+
+leaf nodes of a decison tree are the final decisions
+
+aims of decision trees
+1. we should build a tree which should not be very big
+2. leaf nodes should be the purest nodes - we are 100 % sure about that decision
+3. ginni index of leaf node should be zero
+4. root node should be chosen wisely so that we can reach leaf node as quickly as possible
+
+
+ginni index = 1 - (prob of event1)^2 - (prob of event2)^2......-(prob of event n)^2
+
+i have a bag havig 3 apples and 4 mangoes - ginni of this bag
+1-(3/7)^2 - (4/7)^2
+
+ have a bag havig 7 apples - ginni of this bag 
+ 1-(7/7)^2 = 0
+
+ information gain = 1-(weighted ginni of dependent var)
+
+
+in this algorithm we can come to know what all independent variables are contributing to the result
+
+model_dt = DecisionTreeClassifer()
+model_dt.fit(train_x, train_y)
+pv = model_dt.predict(test_x)
+print("accuracy of the model is ", accuracy_score(test_y, pv))
+print("feature importances are ", model.feature_importances_)
+
+Random Forest
+-------------
+number of trees we make are square of number of independent vars
+
+is collection of decision trees
+also called as random selection with replacement - Boot straping
+
+random forest is a part of ensemble learning
+ensemble learning are of two types
+1. Homogeneous
+   - a) Bagging - Random Forest - random selection with replacement and max voting
+                - Bagging is a parallel process
+   - b) Boosting - Ada Boost, XG Boost - chaining process (wrong predictions from one algo is getting
+                                                           corrected by next algorithm and so on....)
+                 - aim is to get 100% accuracy for that we do overfitting
+                 - Boosting is a sequential process
+2. Heterogeneous 
+a) stacking
+
+suppose there are N observations in our dataset
+What is a probability of any one row getting selected -> 1/N
+What is a probability of any one row not getting selected -> 1-1/N = (N-1)/N
+What is a probability of any n rows not getting selected -> (1-1/N)^n = [(N-1)/N]^n
+Lt[(N-1)/N]^n => 1/e = 0.368
+
+so we can say probability of % of observations not getting selected in random forest is 36.8%
+
+from sklearn.ensemble import RandomForestClassifier
+model_rf = RandomForestClassifier(n_estimators = 100)
+model_rf.fit(train_x, train_y)
+pv = model_rf.predict(test_x)
+print("accuracy of the model is ", accuracy_score(test_y, pv))
+print("feature importances are ", model.feature_importances_)
+
+
+# Steps to follow : try not to hardcode column names the code should be generic so that if you supply any other data set it should run well.
+
+# 1. Check df.shape
+# 2. Check df.columns
+# 3. Check df.dtypes
+# 4. Remove special chars from column names and numbers as well
+# 5. Remove leading and trailing spaces from colmun names
+# 6. Remove rows where special chars are present
+# 7. Convert catagorical dependent variable to numbers
+# 7.1 Use 3sd technique to remove outliers (do not blindly delete it, check if it really is an outlier)
+# 8. Check the count of missing vallues in the colmuns
+# 9. Check the missing vlaue ratio in every column
+# 10. If the missing value ratio is >=0.3 delete the column
+# 11. If the missing value ratio is <0.3 then impute the missing value to the maximum occuring value of that column
+# 12. Find the variance of each column, if var<0.1 then delete the column
+# 13. Find the correlation between independent variables
+# 14. If the correlation is > 0.8 then delete all of them except 1 (Do not manually delete the columns, hint: use numpy.diag)
+# 15. Plot a bar chart of dependent var count of categories and check if data is balanced or unbalanced. (hint : use sns.countplot)
+# 16. If data is balanced, we use accuracy score otherwise use f1 score
+# 17. Check dtypes will show all the columns are float or int
+# 17.1 plot charts to see if data looks good (use scatter plot between different variables)
+# 18. Check if the data points are in same scale or not in not use standardscaler to scale them (remove dependent var in scale)
+# 19. Split the data into training and testing, implement logistic regression, decision tree and random forest
+# 20. Check the feature importances in decision tree and random forest and try to increase the accuracy
+# 21. If the accuracy is < 0.9 find out the reason why it is less
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

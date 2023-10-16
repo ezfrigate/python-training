@@ -1,0 +1,10 @@
+iris dataset
+150 rows 4 independet var
+sepal length, sepal width, petal length, petal width
+
+in dependent var called species thereare 3 categories
+1. Setosa
+2. Versicular
+3. Verginica
+
+ask KMeans to identify dependent var, we will pretend we dont know the dependent var
