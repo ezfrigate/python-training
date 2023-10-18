@@ -1,0 +1,107 @@
+Ques 1:- Write a program that takes two strings from the user and displays which letters are present in both the strings. Search of letters should be case insensitive
+eg. if user enters first string as :- India
+    and enters second string as :- Dance
+    answer should be :- ['d','a'] or ['D','a'] any of these
+
+Ques 2:- Create a dictionary where key is any number and value is any string in a form of sentence. Keep on taking the input till user enters -ve number of 0 as key.
+Once dictionary is created ask user any string  or list of string and we need to remove key value pairs whose values have substring as string/ list of string we entered.
+
+eg1. 
+Input : test_dict = {1 : 'Milk is best for everyone'} 
+string_list = ['love', 'good'] # this is a list user enters
+Output : {1 : 'Milk is best for everyone'} # nothing get deleted as love and good is not there in values of a dictionary
+
+eg2.
+Input : test_dict = {1 : 'I love India', 2: 'India is good'} 
+string_list = ['love', 'good'] # this is a list user enters
+Output : {}  # both key value pairs are removed as love and good are part of values of a dictionary
+
+
+Ques 3:- Read the file HollywoodMovies.csv into a dataframe
+
+3.1 Find the highest rated movie (RottenTomatoes column has ratings) in the "Quest" story type. 
+Ans should be "(The Hurt Locker', 97.0)"
+
+3.2 Find the count of movies in each unique genre. 
+
+Ans should be 
+{'Mystery': 5, 'Romance': 20, 'Biography': 14, 'Horror': 52, 'nan': 1, 'Crime': 15, 'Drama': 109, 'Fantasy': 6, 'Animation': 51, 'Adventure': 30, 'Action': 166, 'Comedy': 177, 'Documentary': 7, 'Musical': 4, 'Thriller': 35}
+
+3.3 Print the names of the top five movies with the costliest budgets along with their budgets and plot a bar chart where labels of the bar should be movie name and height of the bar should be the budget.
+
+Ans:- top 5 movies have budget 260.0, 258.0, 250.0, 250.0
+
+3.4 Is there any correspondence between the critics’ evaluation of a movie and its acceptance by the public,
+ to  find out plot the profitability of a movie against the ratings it receives on Rotten Tomatoes in a form of scatter plot
+
+3.5 sort the data based on column RottenTomatoes and pick top 10 rows
+3.6 find the name of LeadStudio which released maximum number of movies across all the years
+
+3.7 Find the mean of RottenTomatoes column
+3.8 Create new data frame where RottenTomatoes column has all the values greater than 90
+3.9 Find the sum of Profitability and Budget columns year wise.
+eg ans should have three columns Year, Profitability sum, Budget sum
+
+
+
+## Targeted Marketing
+
+Targeted marketing has become increasingly important for banks looking to better understand and serve their customers. By leveraging data and advanced analytics, banks can identify patterns and trends in customer behavior and use that knowledge to deliver more personalized and effective marketing campaigns.
+
+One example of targeted marketing using data science in banks is the use of predictive modeling to identify customers who are likely to be interested in a particular product or service. By analyzing data on customer demographics, transaction history, and other factors, banks can build models that predict which customers are most likely to be receptive to a marketing message. This allows banks to focus their marketing efforts on the customers who are most likely to be interested in their products, rather than wasting resources on customers who are unlikely to be interested.
+
+## Data Set
+
+This dataset is public available for research. The details are described in [Moro et al., 2011](http://hdl.handle.net/1822/14838). The data is related with direct marketing campaigns of a Portuguese banking institution. 
+
+The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed. 
+
+There are two datasets: 
+   
+- bank-full.csv with all examples, ordered by date (from May 2008 to November 2010).
+- bank.csv with 10% of the examples (4521), randomly selected from bank-full.csv.
+
+Input variables:
+
+**bank client data:**
+- age (numeric)
+- job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student","blue-collar","self-employed","retired","technician","services") 
+- marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
+- education (categorical: "unknown","secondary","primary","tertiary")
+- default: has credit in default? (binary: "yes","no")
+- balance: average yearly balance, in euros (numeric) 
+- housing: has housing loan? (binary: "yes","no")
+- loan: has personal loan? (binary: "yes","no")
+
+**related with the last contact of the current campaign**
+- contact: contact communication type (categorical: "unknown","telephone","cellular") 
+- day: last contact day of the month (numeric)
+- month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")
+- duration: last contact duration, in seconds (numeric)
+
+**other attributes**
+- campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+- pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+- previous: number of contacts performed before this campaign and for this client (numeric)
+- poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
+  
+**Output variable (desired target)**
+- subscribed_deposit - has the client subscribed a term deposit? (binary: "yes","no") - This is a dependent variable
+
+## Business Problem
+
+The task is to generate a predictive model that can help in identifying the customers who have a higher chance of conversion.
+
+## Steps involved:
+- Clean the data, column names.
+
+- Data Exploration: Find out which variables are more closely related to the target variable. Also fix any data quality issues such as missing values, Outliers, Special Char, Correlation, Variance etc
+
+- Feature Engineering: Create/modify new variables based on the exploratory data analysis. Perform all the data cleaning and wrangling techniques we discussed in the class.
+
+- Model iterations: Run model iterations by experimenting with different predictors etc, also find out the performance of each model. Try with all the models you know and check which one is giving best accuracy.
+
+- Model finalization: Finalize a model based on model performance
+
+
+

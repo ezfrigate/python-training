@@ -1,0 +1,34 @@
+Activation Functions:
+Linear:
+    Independent variables have direct relationship with dependent variables
+    f(x) = x
+    if x=0 f(0)=0 
+    if x=1 f(1)=1
+Unit step:
+    Returns either 0 or 1
+    Depends on threshold value
+    ex. threshold=5,
+    if x<=5 f(x)=0
+    if x>5 f(x)=1
+Sigmoid:
+    Converts Independent variables of near infinite range into sinmple probabilities between 0 and 1
+    f(x) = 1/1+e^(-y)
+tanh:
+    hyperbolic trigonometric function, ranges between -1 and 1
+    f(-4) = -1
+    f(-2) = -0.7
+    f(2) = 0.7
+    f(4) = 1
+ReLu:
+    When x<0 f(x)=0
+    when input rises above certain threshold it has a Linear relationship
+    f(-3) = 0
+    f(-5) = 0
+    f(3) = 3
+    f(5) = 5
+SoftMax:
+    It is used when we have 4 or 5 classes of outputs
+    It is used to find which class has max probability
+    Generally it isued in output layers of neural networks(ex. digit recognition)
+
+
